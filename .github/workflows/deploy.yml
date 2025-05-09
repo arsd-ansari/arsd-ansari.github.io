@@ -1,4 +1,4 @@
-name: 🚀 Deploy Flutter Web to GitHub Pages
+name: 🚀 Deploy Flutter Web to GitHub Pages (Root)
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write  # Required to push to gh-pages branch
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0'  # Adjust if you use a different version
+          flutter-version: '3.19.0'
 
       - name: Install dependencies
         run: flutter pub get
